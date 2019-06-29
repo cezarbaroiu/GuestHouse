@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using GuestHouse.Core.Models;
+using GuestHouse.Entities;
 
 namespace GuestHouse.Repository.Configurations
 {
@@ -9,7 +9,7 @@ namespace GuestHouse.Repository.Configurations
         {
             ToTable("Room");
 
-            HasKey(c => c.RoomId);
+            HasKey(c => c.Id);
 
             Property(c => c.RoomName)
                 .IsUnicode()

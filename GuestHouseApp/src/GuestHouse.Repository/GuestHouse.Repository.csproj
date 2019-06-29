@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GuestHouse.Repository</RootNamespace>
     <AssemblyName>GuestHouse.Repository</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -53,12 +53,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GuestHouseContext.cs" />
-    <Compile Include="Mapping\BuildingMapping.cs" />
-    <Compile Include="Mapping\RoomMapping.cs" />
+    <Compile Include="DatabaseContext.cs" />
+    <Compile Include="Configurations\BuildingConfiguration.cs" />
+    <Compile Include="Configurations\RoomConfiguration.cs" />
+    <Compile Include="DatabaseContextConfigurationModule.cs" />
+    <Compile Include="DbContextBase.cs" />
+    <Compile Include="LogContextConfiguration.cs" />
+    <Compile Include="LogContextBase.cs" />
+    <Compile Include="LogDatabaseContext.cs" />
+    <Compile Include="LogsContextConfigurationModule.cs" />
+    <Compile Include="DatabaseContextConfiguration.cs" />
+    <Compile Include="LogsMigrations\201906291422538_InitialLog.cs" />
+    <Compile Include="LogsMigrations\201906291422538_InitialLog.Designer.cs">
+      <DependentUpon>201906291422538_InitialLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906291422060_Initial.cs" />
+    <Compile Include="Migrations\201906291422060_Initial.Designer.cs">
+      <DependentUpon>201906291422060_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BuildingRepository.cs" />
-    <Compile Include="Repositories\RoomRepository.cs" />
     <Compile Include="RepositoryModule.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +83,19 @@
       <Project>{5524100a-6c8e-42ef-bafa-aa0ab1c2aa8e}</Project>
       <Name>GuestHouse.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\GuestHouse.Entities2\GuestHouse.Entities.csproj">
+      <Project>{6a57dcd8-2f2b-4cf8-9cc2-d02463f05f9f}</Project>
+      <Name>GuestHouse.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="LogsMigrations\201906291422538_InitialLog.resx">
+      <DependentUpon>201906291422538_InitialLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906291422060_Initial.resx">
+      <DependentUpon>201906291422060_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

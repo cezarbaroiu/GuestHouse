@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestHouse.Core", "GuestHouse.Core\GuestHouse.Core.csproj", "{5524100A-6C8E-42EF-BAFA-AA0AB1C2AA8E}"
 EndProject
@@ -18,6 +18,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{50B4DD82-367B-4FBA-BB81-3A29DC71E297}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestHouse.Services.Tests", "..\Test\GuestHouse.Services.Tests\GuestHouse.Services.Tests.csproj", "{F98B822A-922D-4266-93BC-5CC37C936E1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuestHouse.Entities", "GuestHouse.Entities2\GuestHouse.Entities.csproj", "{6A57DCD8-2F2B-4CF8-9CC2-D02463F05F9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,11 +55,18 @@ Global
 		{F98B822A-922D-4266-93BC-5CC37C936E1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F98B822A-922D-4266-93BC-5CC37C936E1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F98B822A-922D-4266-93BC-5CC37C936E1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A57DCD8-2F2B-4CF8-9CC2-D02463F05F9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A57DCD8-2F2B-4CF8-9CC2-D02463F05F9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A57DCD8-2F2B-4CF8-9CC2-D02463F05F9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A57DCD8-2F2B-4CF8-9CC2-D02463F05F9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F98B822A-922D-4266-93BC-5CC37C936E1C} = {50B4DD82-367B-4FBA-BB81-3A29DC71E297}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E88FC7FD-D067-4C77-98DB-CDD710555095}
 	EndGlobalSection
 EndGlobal

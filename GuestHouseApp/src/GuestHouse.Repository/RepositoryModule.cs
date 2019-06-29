@@ -1,6 +1,5 @@
-﻿using Autofac;
-using GuestHouse.Core.Repository;
-using GuestHouse.Repository.Repositories;
+﻿using System.Data.Entity;
+using Autofac;
 
 namespace GuestHouse.Repository
 {
@@ -8,9 +7,7 @@ namespace GuestHouse.Repository
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<RoomRepository>().As<IRoomRepository>().InstancePerLifetimeScope();
-            builder.RegisterType<BuildingRepository>().As<IBuildingRepository>().InstancePerLifetimeScope();
-            
+            builder.RegisterType<DatabaseContext>().AsSelf().As<DbContext>().InstancePerLifetimeScope();
         }
     }
 }

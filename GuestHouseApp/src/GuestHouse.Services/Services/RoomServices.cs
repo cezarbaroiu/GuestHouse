@@ -9,25 +9,24 @@ namespace GuestHouse.Services.Services
 {
     public class RoomServices : IRoomServices
     {
-        private readonly IUnitOfWork _unitOfWork;
 
-        public RoomServices(IUnitOfWork unitOfWork)
+        public RoomServices()
         {
-            _unitOfWork = unitOfWork;
         }
 
         public IList<GetRoomDto> GetRooms()
         {
-            var rooms = from r in _unitOfWork.RoomRepository.GetRooms()
-                select new GetRoomDto()
-                {
-                    RoomName = r.RoomName,
-                    NumberOfPersons = r.NumberOfPersons,
-                    PricePerNight = r.PricePerNight,
-                    HasOwnBathroom = r.HasOwnBathroom,
-                    Description = r.Description
-                };
-            return rooms.ToList();
+            //var rooms = from r in _unitOfWork.RoomRepository.GetRooms()
+            //    select new GetRoomDto()
+            //    {
+            //        RoomName = r.RoomName,
+            //        NumberOfPersons = r.NumberOfPersons,
+            //        PricePerNight = r.PricePerNight,
+            //        HasOwnBathroom = r.HasOwnBathroom,
+            //        Description = r.Description
+            //    };
+            //return rooms.ToList();
+            return null;
         }
 
         public GetRoomDto GetRoomById(int id)

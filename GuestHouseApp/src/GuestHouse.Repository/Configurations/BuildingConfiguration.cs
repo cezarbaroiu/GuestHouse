@@ -1,15 +1,16 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using GuestHouse.Core.Models;
+using GuestHouse.Entities;
 
-namespace GuestHouse.Repository.Mapping
+
+namespace GuestHouse.Repository.Configurations
 {
-    public class BuildingMapping : EntityTypeConfiguration<Building>
+    public class BuildingConfiguration : EntityTypeConfiguration<Building>
     {
-        public BuildingMapping()
+        public BuildingConfiguration()
         {
             ToTable("Building");
 
-            HasKey(c => c.BuildingId);
+            HasKey(c => c.Id);
 
             HasMany(c => c.Rooms)
                 .WithRequired(b => b.Building)
