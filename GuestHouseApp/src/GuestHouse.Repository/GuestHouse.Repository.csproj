@@ -53,7 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GuestHouseContext.cs" />
+    <Compile Include="Mapping\BuildingMapping.cs" />
+    <Compile Include="Mapping\RoomMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BuildingRepository.cs" />
+    <Compile Include="Repositories\RoomRepository.cs" />
+    <Compile Include="RepositoryModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
