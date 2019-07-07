@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -12,6 +11,7 @@ namespace GuestHouse.Web.App_Start
     {
         public static void Register(HttpConfiguration config)
         {
+            SwaggerConfig.Register(config);
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(
@@ -19,8 +19,6 @@ namespace GuestHouse.Web.App_Start
                 routeTemplate: "{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-
-            SwaggerConfig.Register(config);
         }
     }
 }

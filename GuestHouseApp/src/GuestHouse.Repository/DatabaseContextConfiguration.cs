@@ -12,7 +12,7 @@ namespace GuestHouse.Repository.Migrations
 
         protected override void Seed(DatabaseContext context)
         {
-            
+            DbSeed.PopulateDatabase(context);
         }
     }
 }

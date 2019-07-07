@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.Remoting.Activation;
 
 namespace GuestHouse.Entities
 {
@@ -11,6 +10,7 @@ namespace GuestHouse.Entities
         public string Level { get; set; }
         public string Exception { get; set; }
         public string Logger { get; set; }
+        public string AdditionalIdentifier { get; set; }
         public string AdditionalData { get; set; }
     }
 }

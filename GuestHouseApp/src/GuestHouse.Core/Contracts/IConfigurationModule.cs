@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace GuestHouse.Repository.Contracts
+namespace GuestHouse.Core.Contracts
 {
     public interface IConfigurationModule
     {

@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
+using GuestHouse.Core.Contracts;
 using GuestHouse.Repository.Configurations;
-using GuestHouse.Repository.Contracts;
 
 namespace GuestHouse.Repository
 {

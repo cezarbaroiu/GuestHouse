@@ -46,18 +46,15 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\LogConfiguration.cs" />
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="Configurations\BuildingConfiguration.cs" />
     <Compile Include="Configurations\RoomConfiguration.cs" />
     <Compile Include="DatabaseContextConfigurationModule.cs" />
     <Compile Include="DbContextBase.cs" />
+    <Compile Include="DbSeed.cs" />
     <Compile Include="LogContextConfiguration.cs" />
     <Compile Include="LogContextBase.cs" />
     <Compile Include="LogDatabaseContext.cs" />
@@ -71,8 +68,13 @@
     <Compile Include="Migrations\201906291422060_Initial.Designer.cs">
       <DependentUpon>201906291422060_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906291735563_RefactorBuildingEntity.cs" />
+    <Compile Include="Migrations\201906291735563_RefactorBuildingEntity.Designer.cs">
+      <DependentUpon>201906291735563_RefactorBuildingEntity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryModule.cs" />
+    <Compile Include="Tables.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -95,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906291422060_Initial.resx">
       <DependentUpon>201906291422060_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906291735563_RefactorBuildingEntity.resx">
+      <DependentUpon>201906291735563_RefactorBuildingEntity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
