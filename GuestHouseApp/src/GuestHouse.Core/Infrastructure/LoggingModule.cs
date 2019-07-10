@@ -11,13 +11,13 @@ namespace GuestHouse.Core.Infrastructure
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.Register((c, p) =>
-                new Logger(p.TypedAs<Type>())
-            ).AsImplementedInterfaces();
-
             builder.RegisterType<LoggerConfiguration>()
                 .AsSelf()
                 .AutoActivate();
+
+            builder.Register((c, p) =>
+                new Logger(p.TypedAs<Type>())
+            ).AsImplementedInterfaces();
         }
 
         protected override void AttachToComponentRegistration(IComponentRegistry componentRegistry, IComponentRegistration registration)

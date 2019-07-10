@@ -1,6 +1,6 @@
 ﻿namespace GuestHouse.Core.Dtos.Room
 {
-    public class GetRoomDto
+    public class RoomDto
     {
         public string RoomName { get; set; }
         public int NumberOfPersons { get; set; }

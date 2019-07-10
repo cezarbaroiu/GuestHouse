@@ -8,6 +8,7 @@ namespace GuestHouse.Repository
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<DatabaseContext>().AsSelf().As<DbContext>().InstancePerLifetimeScope();
+            builder.RegisterType<LogDatabaseContext>().AsSelf().InstancePerLifetimeScope();
         }
     }
 }

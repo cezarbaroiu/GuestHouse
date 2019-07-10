@@ -13,22 +13,12 @@ namespace GuestHouse.Services.Services
         {
         }
 
-        public IList<GetRoomDto> GetRooms()
+        public IList<RoomDto> GetRooms()
         {
-            //var rooms = from r in _unitOfWork.RoomRepository.GetRooms()
-            //    select new GetRoomDto()
-            //    {
-            //        RoomName = r.RoomName,
-            //        NumberOfPersons = r.NumberOfPersons,
-            //        PricePerNight = r.PricePerNight,
-            //        HasOwnBathroom = r.HasOwnBathroom,
-            //        Description = r.Description
-            //    };
-            //return rooms.ToList();
             return null;
         }
 
-        public GetRoomDto GetRoomById(int id)
+        public RoomDto GetRoomById(int id)
         {
             throw new NotImplementedException();
         }

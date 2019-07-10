@@ -63,7 +63,7 @@
     <Compile Include="Contracts\IConfigurationModule.cs" />
     <Compile Include="Contracts\ILogger.cs" />
     <Compile Include="CoreModule.cs" />
-    <Compile Include="Dtos\Room\GetRoomDto.cs" />
+    <Compile Include="Dtos\Room\RoomDto.cs" />
     <Compile Include="Infrastructure\Helpers\LoggerConfiguration.cs" />
     <Compile Include="Infrastructure\Helpers\LoggerConstants.cs" />
     <Compile Include="Infrastructure\Logger.cs" />
@@ -80,7 +80,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
