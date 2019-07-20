@@ -5,7 +5,8 @@ namespace GuestHouse.Core.Services
 {
     public interface IRoomServices
     {
-        IList<GetRoomDto> GetRooms();
-        GetRoomDto GetRoomById(int id);
+        IList<RoomDto> GetRooms();
+        RoomDto GetRoomById(int id);
+        
     }
 }

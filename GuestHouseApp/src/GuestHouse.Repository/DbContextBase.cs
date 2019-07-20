@@ -6,7 +6,7 @@ namespace GuestHouse.Repository
 {
     public class DbContextBase : DbContext
     {
-        private readonly IConfigurationModule[] _modules;
+       private readonly IConfigurationModule[] _modules;
        protected DbContextBase() { }
 
        protected DbContextBase(string connectionString) : base(connectionString)

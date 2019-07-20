@@ -2,6 +2,7 @@
 using Autofac;
 using Autofac.Integration.WebApi;
 using GuestHouse.Core;
+using GuestHouse.Core.Infrastructure;
 using GuestHouse.Repository;
 using GuestHouse.Services;
 using Module = Autofac.Module;
@@ -12,6 +13,7 @@ namespace GuestHouse.Web
     {
         protected override void Load(ContainerBuilder builder)
         {
+            builder.RegisterModule<LoggingModule>();
             builder.RegisterModule<CoreModule>();
             builder.RegisterModule<RepositoryModule>();
             builder.RegisterModule<ServicesModule>();

@@ -16,7 +16,8 @@ namespace GuestHouse.Repository
         {
         }
 
-        public LogContextBase(string connection, params IConfigurationModule[] modules)
+        public LogContextBase(string connection, params IConfigurationModule[] modules) 
+            : base(connection)
         {
             _modules = modules;
         }

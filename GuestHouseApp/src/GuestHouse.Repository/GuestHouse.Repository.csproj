@@ -64,6 +64,10 @@
     <Compile Include="LogsMigrations\201906291422538_InitialLog.Designer.cs">
       <DependentUpon>201906291422538_InitialLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogsMigrations\201907201359472_UnknownChanges.cs" />
+    <Compile Include="LogsMigrations\201907201359472_UnknownChanges.Designer.cs">
+      <DependentUpon>201907201359472_UnknownChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201906291422060_Initial.cs" />
     <Compile Include="Migrations\201906291422060_Initial.Designer.cs">
       <DependentUpon>201906291422060_Initial.cs</DependentUpon>
@@ -94,6 +98,9 @@
   <ItemGroup>
     <EmbeddedResource Include="LogsMigrations\201906291422538_InitialLog.resx">
       <DependentUpon>201906291422538_InitialLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogsMigrations\201907201359472_UnknownChanges.resx">
+      <DependentUpon>201907201359472_UnknownChanges.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201906291422060_Initial.resx">
       <DependentUpon>201906291422060_Initial.cs</DependentUpon>

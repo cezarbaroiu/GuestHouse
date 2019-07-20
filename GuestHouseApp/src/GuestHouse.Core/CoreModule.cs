@@ -14,8 +14,7 @@ namespace GuestHouse.Core
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<WebConfiguration>().As<IConfiguration>().InstancePerLifetimeScope();
-            builder.RegisterType<Logger>().As<ILogger>().InstancePerLifetimeScope();
-            builder.RegisterModule<LoggingModule>();
+            builder.RegisterType<Logger>().As<ILogger>().InstancePerLifetimeScope();   
         }
     }
 }
