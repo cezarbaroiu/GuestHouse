@@ -16,7 +16,6 @@ namespace GuestHouse.Web.Controllers
         [HttpGet]
         public IEnumerable<String> GetRooms()
         {
-            _logger.Trace("RoomController");
             return new List<String> {"room1", "room2"};
         }
     }

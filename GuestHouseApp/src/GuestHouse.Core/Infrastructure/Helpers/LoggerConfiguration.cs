@@ -35,8 +35,8 @@ namespace GuestHouse.Core.Infrastructure.Helpers
                 Name = LoggerConstants.TargetName,
                 ConnectionString = conn,
                 DBProvider = LoggerConstants.DbProvider,
-                CommandText = @"INSERT INTO [dbo].[Logs] (Id, TimeStamp, Message, Level, Exception, Logger, AdditionalData)
-                              VALUES (NEWID(), @timeStamp, @message, @level, @exception, @logger, @additionalData)",
+                CommandText = @"INSERT INTO [dbo].[Logs] (Id, TimeStamp, Message, Level, Exception, Logger, AdditionalData, AdditionalIdentifier)
+                              VALUES (NEWID(), @timeStamp, @message, @level, @exception, @logger, @additionalData, @additionalIdentifier)",
                 Parameters =
                 {
                     new DatabaseParameterInfo("@timeStamp", "${date}"),
@@ -44,12 +44,15 @@ namespace GuestHouse.Core.Infrastructure.Helpers
                     new DatabaseParameterInfo("@level", "${level}"),
                     new DatabaseParameterInfo("@exception", "${exception}"),
                     new DatabaseParameterInfo("@logger", "${logger}"),
-                    new DatabaseParameterInfo("@additionalData", $"${{event-properties:item={LoggerConstants.AdditionalDataPropertyKey}}}")
+                    new DatabaseParameterInfo("@additionalData", $"${{event-properties:item={LoggerConstants.AdditionalDataPropertyKey}}}"),
+                    new DatabaseParameterInfo("@additionalIdentifier", $"${{event-properties:item={LoggerConstants.AdditionalIdPropertyKey}}}")
                 }
             };
 
             configuration.AddTarget(dbTarget);
             configuration.LoggingRules.Add(new LoggingRule("*", logLevel, dbTarget));
+
+            LogManager.Configuration = configuration;
         }
 
         private LogLevel GetLoggingLevel(string logLevel)
