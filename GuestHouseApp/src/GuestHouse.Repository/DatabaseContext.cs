@@ -5,7 +5,8 @@ namespace GuestHouse.Repository
 {
     public class DatabaseContext : DbContextBase
     {
-        public DatabaseContext() : base("name=GuestHouseConnection", new DatabaseContextConfigurationModule())
+        public DatabaseContext() : 
+            base("name=GuestHouseConnection", new DatabaseContextConfigurationModule())
         {
         }
 

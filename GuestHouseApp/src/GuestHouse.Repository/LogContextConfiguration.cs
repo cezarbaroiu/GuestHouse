@@ -12,7 +12,7 @@ namespace GuestHouse.Repository
 
         protected override void Seed(LogDatabaseContext context)
         {
-
+             
         }
     }
 }
